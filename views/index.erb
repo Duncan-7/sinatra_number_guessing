@@ -1,5 +1,27 @@
 <html>
-  <head></head>
+  <head>
+  <% if message.include?("Way") %>
+    <style>
+      body {
+      background: red;
+      }
+    </style>
+    <% elsif message.include?("right") %>
+    <style>
+      body {
+      background: green;
+      }
+    </style>
+  <% else %>
+  <style>
+      body {
+      background: yellow;
+      }
+    </style>
+  <% end %>
+
+
+  </head>
   <body>
     
     <p>
