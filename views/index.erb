@@ -30,7 +30,11 @@
     <p>
       Guesses left: <%= guesses %>
     </p>
-
+    <% if cheat %>
+      <p>
+        <%= number2 %>
+      </p> 
+    <% end %>
     <form>
       <input type='text' name='guess' />
       <input type='submit' value='Guess!' />

@@ -28,6 +28,7 @@ end
 
 get '/' do
   guess = params["guess"]
+  cheat = params["cheat"]
   message = check_guess(guess)
   if @@guesses == 0
     old_answer = @@secret_number
@@ -37,6 +38,7 @@ get '/' do
   end
   erb :index, :locals => {:number2 => @@secret_number,
                           :message => message,
-                          :guesses => @@guesses
+                          :guesses => @@guesses,
+                          :cheat => cheat
                         }
 end
